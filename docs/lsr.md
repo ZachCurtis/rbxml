@@ -12,13 +12,13 @@
 
 ```lua
 local lsr = require(lsr)
-local lsrModel = lsr.new() --optionally pass training data params to skip using lsrModel:trainLSR()
+local lsrModel = lsr.new() --optionally pass training data params to skip using lsrModel:train()
 ```
 ---
 
 ## Methods
 
-### trainLSR()
+### trainLSR(x,y)
 
 ```lua
 lsrModel:train(X,Y)
@@ -41,8 +41,14 @@ local predictY = lsrModel:predictLSR(X)
 
 ---
 
-### computeAvgError()
+### computeAvgError(x,y)
 
+```lua
+local avgError = lsrModel:computeAvgError(x,y)
+```
+-   X and Y are the arrays used to train the model
+-   Returns a normalized error average of calculated coefficents m and b.
+-   The lower the average of error is; the better linear correlation between input X and output Y
 
 ---
 
