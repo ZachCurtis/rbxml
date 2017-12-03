@@ -2,9 +2,9 @@
 
 ## Index
 
--   Use
--   Methods
--   Example
+-   [Use](#use)
+-   [Methods](#methods)
+-   [Example](#example)
 
 ---
 
