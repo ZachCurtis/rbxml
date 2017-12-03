@@ -12,7 +12,6 @@ function lsr.new(x,y)
 end
 
 function lsr:train(x,y)
-	print('called')
 --computes y = mx + b given array X and array Y of equal lengths and returns tupel m, b, mError, bError
 
 --thanks to https://github.com/jprichardson/least-squares/blob/master/lib/least-squares.js	
@@ -21,7 +20,6 @@ function lsr:train(x,y)
 		local n = #x
 		local sumx, sumy, sumx2, sumxy, st, sr = 0,0,0,0,0,0 --predeclare to ensure scope
 		for i = 1, n do
-			print('first ieteration at index ' .. i) 
 			sumx = sumx + x[i] --total sum of all indexes in x array
 			sumy = sumy + y[i] --total sum of all indexes in y array
 			sumxy = sumxy + x[i] * y[i] --sum of both arrays
@@ -38,7 +36,6 @@ function lsr:train(x,y)
 		
 		local varSum = 0
 		for i = 1, n do --iterate the arrays to populate varSum
-			print('second ieteration at index ' .. i) 
 			varSum = varSum + (y[i] - b - m * x[i]) * (y[i] - b - m * x[i])
 			
 			if n > 50 then wait() end
@@ -50,7 +47,6 @@ function lsr:train(x,y)
 		local mErr = math.sqrt(n / delta * variant)
 		local bErr = math.sqrt(variant / delta * sumx2)
 		
-		print('done')
 		self.m, self.b, self.mErr, self.bErr = m, b, mErr, bErr
 		return m, b, mErr, bErr
 	end
