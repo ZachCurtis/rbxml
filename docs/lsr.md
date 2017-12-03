@@ -55,6 +55,17 @@ local predictY = lsrModel:predictLSR(X)
 
 ## Example
 
+Using the lsr object is easy. First we will call it's object constructor, train it, and finally get a prediction from it.
+Our sample data looks like:
+
+|Input X |Output Y|
+|--------|--------|
+|2       |0       | 
+|2       |1       |
+|6       |2       |
+|8       |3       |
+|10      |3       |
+
 ```lua
 local lsr = require(game.ServerScriptService.lsr)
 local lsrModel = lsr.new()
