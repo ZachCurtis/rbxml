@@ -52,8 +52,10 @@ function lsr:train(x,y)
 	end
 end
 
-function lsr:computeAvgError(m, b, x, y)
+function lsr:computeAvgError(x,y)
+	assert(self.m, 'You first must train the model using lsr:train(x,y)')
 	assert(#x == #y, 'Your array paramters must be of equal length')
+	local m, b = self.m, self.b
 	local err = 0
 	for i = 1, #x do
 		err = err + (y[i] - (m * x[i] + b))^2
