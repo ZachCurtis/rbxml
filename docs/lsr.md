@@ -78,5 +78,5 @@ lsrModel:train(xInput, yOutput)
 print('Our mErr ' .. lsrModel.mErr) --> 'our mErr 0.069877124296868'
 print('Our bErr ' .. lsrModel.bErr) --> 'our bErr 0.4506909433'
 
-print(lsrModel:predict(14) --> 4.6875
+print(lsrModel:predict(14)) --> 4.6875
 ```
