@@ -52,12 +52,20 @@ function lsr:train(x,y)
 	end
 end
 
+function lsr:computeAvgError(m, b, x, y)
+	assert(#x == #y, 'Your array paramters must be of equal length')
+	local err = 0
+	for i = 1, #x do
+		err = err + (y[i] - (m * x[i] + b))^2
+	end
+	return err / #x
+end
+
 function lsr:predict(x)
-	local check = assert(self.m, 'You first must train the model using lsr:trainLSR(x,y)')
+	local check = assert(self.m, 'You first must train the model using lsr:train(x,y)')
 	if check then
 		return self.m * x + self.b
 	end
 end
-
 
 return lsr
