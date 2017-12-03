@@ -39,6 +39,10 @@ local predictY = lsrModel:predictLSR(X)
 -   X is a single numerical input
 -   Returns prediction of Y
 
+---
+
+### computeAvgError()
+
 
 ---
 
@@ -75,8 +79,8 @@ local yOutput = {0, 1, 2, 3, 3}
 
 lsrModel:train(xInput, yOutput)
 
-print('Our mErr ' .. lsrModel.mErr) --> 'our mErr 0.069877124296868'
-print('Our bErr ' .. lsrModel.bErr) --> 'our bErr 0.4506909433'
-
+print('Our mErr ' .. lsrModel.mErr) --> 'Our mErr 0.069877124296868'
+print('Our bErr ' .. lsrModel.bErr) --> 'Our bErr 0.4506909433'
+print('Average err ' .. lsrModel:computeError(lsrModel.m, lsrModel.b, xInput, yOutput))  --> 'Average err 0.15'
 print(lsrModel:predict(14)) --> 4.6875
 ```
