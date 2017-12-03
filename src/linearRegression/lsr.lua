@@ -59,7 +59,7 @@ end
 function lsr:predict(x)
 	local check = assert(self.m, 'You first must train the model using lsr:trainLSR(x,y)')
 	if check then
-		return self.m * self.x + self.b
+		return self.m * x + self.b
 	end
 end
 
