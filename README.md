@@ -1,7 +1,7 @@
 # rbxml
 OOP Roblox Module Scripts for machine learning
 
-## index
+## docs index
 
 ### linear regression
--   lsr.lua - A simple  ordinary least squares regression object.
+-   [lsr.lua](../docs/lsr.md) - A simple  ordinary least squares regression object.
