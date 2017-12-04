@@ -1,4 +1,4 @@
-[[
+--[[
 Dec 2017
 Zach Curtis AKA InfinityDesign
 
@@ -6,7 +6,7 @@ very basic linear regression implementation
 using least squares output = constant slope * input + regression coefficient 
 (y = b0x + b1/y = mx + b)
 
-]]
+]]--
 
 local perceptron = {}
 
@@ -51,7 +51,7 @@ end
 function perceptron:train(inputArray, output)
 	local curChoice = self:sumCalc(inputArray) --make choice based on current weights
 	local err = output - curChoice
-	
+
 	--adjust weights according to float input and real err
 	for i = 1, #self.weights do
 		self.weights[i] = (err * inputArray[i]) * self.lr
