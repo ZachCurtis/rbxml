@@ -29,7 +29,7 @@ function generateTestData(inputNum, amt, point) --point is Vector2 array of max 
 end
 
 
-local inputs = {75,-23} --test inputs
+local inputs = {75,-23, 1} --test inputs
 print('single perceptron neural network testing')
 print('we are training with 50 vector2 points in range (+/-100, +/-75)')
 local testData = generateTestData(2, 50, {100,75})
@@ -87,5 +87,3 @@ print(errSum .. ' out of our ' .. #controlData .. ' control points were incorrec
 --print('that gives us an error precentage of ' .. errSum/#controlData)
 
 print('--')print('-')print('--')
-
-
