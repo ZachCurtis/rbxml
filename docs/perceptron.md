@@ -1,4 +1,4 @@
-# Binary perceptron
+# Binary Perceptron
 
 ## Index
 
