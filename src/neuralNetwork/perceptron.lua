@@ -23,7 +23,8 @@ function perceptron.new(inputNum, learningRate)
 		newPercpt.lr = 0.1
 	end
 	--generate our first random weights
-	newPercpt.weights = newPercpt:_randomweights(inputNum)
+	newPercpt:_randomweights(inputNum)
+	
 	return newPercpt
 end
 
@@ -41,7 +42,8 @@ function perceptron:_randomweights(num)
 			table.insert(tempTable, ranWeight)
 		end
 	end
-	return tempTable
+	--set weights
+	self.weights = tempTable
 end
 
 --given inputArray of same length weights array
@@ -76,4 +78,3 @@ function perceptron:activation(n)
 end
 
 return perceptron
-
