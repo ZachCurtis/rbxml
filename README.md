@@ -11,4 +11,4 @@ OOP Roblox Module Scripts for machine learning
 
 
 ### neuralNetwork
--   perceptron.lua (simple implementation, wip so not documented yet. see script comments for useage)
+-   [perceptron.lua](./docs/perceptron.md) - A simple binary perceptron. Usefull for simple binary classification.
