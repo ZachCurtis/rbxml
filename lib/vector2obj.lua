@@ -12,9 +12,8 @@ vector2obj._index = vector2obj
 function vector2obj.new(maxX,maxY)
 	local v2new = {}
 	setmetatable(v2new, vector2obj)
-	v2new.bias = 1 --constant bias 
 	
-	v2new.data = {math.random() * math.random(-maxX, maxX),math.random() * math.random(-maxY, -maxY)}
+	v2new.data = {math.random() * math.random(-maxX, maxX),math.random() * math.random(-maxY, -maxY), 1} --index 3 is a bias towards constant 1 or true using step method
 	if v2new.data[1] > v2new.data[2] then
 		v2new.answer = 1
 	else
