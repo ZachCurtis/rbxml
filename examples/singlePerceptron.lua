@@ -61,7 +61,7 @@ for i = 1, #controlData do
 		errSum = errSum + 1
 	end
 end
-print(errSum .. ' out of our ' .. #controlData .. 'control points were incorrect')
+print(errSum .. ' out of our ' .. #controlData .. ' control points were incorrect')
 --print('that gives us an error precentage of ' .. #controlData/errSum)
 
 print('training with original training set')
