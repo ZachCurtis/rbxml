@@ -186,7 +186,3 @@ for i = 1, genTarg do
 end
 
 msg.Text = 'Perceptron has sucessfully learned to catagorize our data in ' .. gen .. ' generations'
-
-
-
-
