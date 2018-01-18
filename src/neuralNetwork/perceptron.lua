@@ -1,13 +1,11 @@
 --[[
-Dec 2017
+Jan 2018
 Zach Curtis AKA InfinityDesign
-
 very basic linear regression implementation
 using least squares output = constant slope * input + regression coefficient 
 (y = b0x + b1/y = mx + b)
-
 ]]--
-
+local rng = Random.new(tick())
 local perceptron = {}
 
 perceptron.__index = perceptron
@@ -30,17 +28,10 @@ end
 
 --generate random weights for our untrained/unlearned perceptron
 function perceptron:_randomweights(num)
-	math.randomseed(tick()) --classic random number problem. randomseeding tick works in our case because we only randomize weights once.
 	local tempTable = {}
 	for i = 1, num do
-		local ranWeight = math.random()
-		local negDetermine = math.random()
-		if negDetermine < 0.5 then
-			ranWeight = ranWeight * -1
-			table.insert(tempTable, ranWeight)
-		else
-			table.insert(tempTable, ranWeight)
-		end
+		local ranWeight = rng:NextDouble(-1, 1)
+		table.insert(tempTable, ranWeight)
 	end
 	--set weights
 	self.weights = tempTable
